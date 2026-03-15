@@ -2,7 +2,8 @@ site: .
 content:
   - name: homepage
     label: Homepage
-    file: index.html
+    type: file
+    path: index.html
     fields:
       - name: main_title
         label: Main Title
