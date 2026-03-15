@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Support Plan · elementary · first‑year teacher</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter (clean, professional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f5fa;
+            color: #1e3a4b;
+            line-height: 1.6;
+        }
+        .app {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 320px;
+            background: #0a3144;
+            color: #e3eef7;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+            border-right: 5px solid #e68a2e;
+            box-shadow: 4px 0 18px rgba(0,20,30,0.25);
+            z-index: 100;
+        }
+        .sidebar h2 {
+            font-weight: 500;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            margin-bottom: 2.2rem;
+            border-bottom: 2px solid #e68a2e;
+            padding-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+        .sidebar h2 i {
+            color: #e68a2e;
+            font-size: 2rem;
+        }
+        .sidebar nav ul {
+            list-style: none;
+        }
+        .sidebar nav ul li {
+            margin-bottom: 0.4rem;
+        }
+        .sidebar nav ul li a {
+            color: #c0d9ef;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.7rem 1rem 0.7rem 1.5rem;
+            display: block;
+            border-left: 4px solid transparent;
+            transition: all 0.2s;
+            font-size: 0.98rem;
+            border-radius: 0 30px 30px 0;
+        }
+        .sidebar nav ul li a i {
+            width: 28px;
+            color: #e68a2e;
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+        .sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+            background: #1f5570;
+            color: white;
+            border-left: 4px solid #e68a2e;
+        }
+        .sidebar nav .sub-nav {
+            margin-left: 2rem;
+            list-style: none;
+            border-left: 1px dashed #3f7e9c;
+            padding-left: 0.5rem;
+        }
+        .sidebar nav .sub-nav li a {
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+        }
+        .sidebar-footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #9bb9d2;
+            border-top: 1px solid #2d637f;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        .main-content {
+            flex: 1;
+            margin-left: 320px;
+            background: white;
+            padding: 2.8rem 3.5rem;
+            max-width: calc(100% - 320px);
+        }
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #0a3144;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            border-left: 8px solid #e68a2e;
+            padding-left: 2rem;
+        }
+        .main-sub {
+            font-size: 1.2rem;
+            color: #3f6f8c;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            margin-left: 2.8rem;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #0a3144;
+            margin: 2.5rem 0 1.5rem 0;
+            border-bottom: 4px solid #e68a2e;
+            padding-bottom: 0.6rem;
+            display: inline-block;
+        }
+        .subsection-title {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #1d5b79;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .subsection-title i {
+            color: #e68a2e;
+            font-size: 1.8rem;
+        }
+        .mission-block {
+            background: linear-gradient(145deg, #f3f9ff, #ffffff);
+            border-radius: 2.5rem;
+            padding: 2.5rem 3rem;
+            border: 2px dashed #e68a2e;
+            text-align: center;
+            margin: 1rem 0 2.5rem;
+            box-shadow: 0 15px 25px -10px rgba(0,55,90,0.1);
+        }
+        .mission-block p {
+            font-size: 2.1rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0a3144;
+        }
+        .mission-block p::before { content: "“"; font-size: 3.5rem; color: #e68a2e; margin-right: 0.2rem; vertical-align: middle; }
+        .mission-block p::after { content: "”"; font-size: 3.5rem; color: #e68a2e; margin-left: 0.2rem; vertical-align: bottom; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,45,70,0.06);
+            margin: 2rem 0;
+        }
+        th {
+            background-color: #1d5b79;
+            color: white;
+            font-weight: 500;
+            padding: 1rem;
+            text-align: left;
+        }
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #dde9f2;
+        }
+        .matrix th { background: #0a3144; }
+        .matrix td { background: #f8fcff; border: 1px solid #c3d9eb; }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 1.8rem 0;
+        }
+        .card {
+            background: #f8fbfe;
+            border-radius: 28px;
+            padding: 1.5rem;
+            border: 1px solid #e2eefc;
+            transition: 0.2s;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.02);
+        }
+        .card i {
+            font-size: 2rem;
+            color: #e68a2e;
+            margin-bottom: 1rem;
+        }
+
+        .rule-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .rule-pill {
+            background: #eaf1f9;
+            border-radius: 60px;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            color: #0a3144;
+            border-left: 6px solid #e68a2e;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+
+        .accordion {
+            margin: 2rem 0;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid #d4e2f0;
+            background: white;
+        }
+        .accordion-item {
+            background: white;
+            border-bottom: 1px solid #d4e2f0;
+        }
+        .accordion-item:last-child { border-bottom: none; }
+        .accordion-header {
+            background: #f3f9ff;
+            padding: 1.2rem 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0a3144;
+            transition: background 0.15s;
+        }
+        .accordion-header:hover { background: #e5f0fa; }
+        .accordion-header i {
+            color: #e68a2e;
+            font-size: 1.8rem;
+        }
+        .accordion-header .chevron {
+            margin-left: auto;
+            transition: transform 0.3s;
+        }
+        .accordion-item.open .chevron {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s;
+            background: white;
+        }
+        .accordion-item.open .accordion-content {
+            padding: 1.5rem 2rem 2rem 2rem;
+            max-height: 800px;
+        }
+        .step-list {
+            list-style: none;
+        }
+        .step-list li {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+        .step-num {
+            background: #e68a2e;
+            color: #0a3144;
+            width: 32px;
+            height: 32px;
+            border-radius: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .references {
+            background: #f2f9ff;
+            border-radius: 32px;
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+        }
+        .references a {
+            color: #1d5b79;
+            text-decoration: none;
+            border-bottom: 1px dotted #e68a2e;
+            word-break: break-all;
+        }
+        .references a:hover { border-bottom: 2px solid; }
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            color: #5e7e9a;
+            border-top: 2px solid #e2effa;
+            padding-top: 2rem;
+            font-size: 0.95rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #e68a2e;
+            color: #0a3144;
+            border-radius: 40px;
+            padding: 0.2rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .example-box {
+            background: #fcf9f2;
+            border-left: 5px solid #e68a2e;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+        }
+        .first-year-note {
+            background: #e7f3fa;
+            border-radius: 30px;
+            padding: 1.2rem 2rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #c3d9eb;
+        }
+        .first-year-note i {
+            font-size: 2.2rem;
+            color: #e68a2e;
+        }
+        @media (max-width: 900px) {
+            .sidebar { width: 260px; }
+            .main-content { margin-left: 260px; padding: 2rem; max-width: calc(100% - 260px); }
+        }
+        @media (max-width: 700px) {
+            .app { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 4px solid #e68a2e; }
+            .main-content { margin-left: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- FIXED SIDEBAR with all parts/subheadings (capitalized) -->
+    <aside class="sidebar">
+        <h2><i class="fas fa-clipboard-list"></i> Plan</h2>
+        <nav>
+            <ul>
+                <li><a href="#part1-intro" class="nav-link"><i class="fas fa-flag"></i> Part 1: Introduction</a></li>
+                <ul class="sub-nav">
+                    <li><a href="#mission" class="nav-link"><i class="fas fa-bullseye"></i> Mission Statement</a></li>
+                    <li><a href="#demographics" class="nav-link"><i class="fas fa-users"></i> Demographics & Implications</a></li>
+                    <li><a href="#family" class="nav-link"><i class="fas fa-hand-holding-heart"></i> Family Engagement (6)</a></li>
+                </ul>
+                <li><a href="#part2-env" class="nav-link"><i class="fas fa-school"></i> Part 2: Structured Environment</a></li>
+                <ul class="sub-nav">
+                    <li><a href="#layout" class="nav-link"><i class="fas fa-vector-square"></i> Classroom Layout</a></li>
+                    <li><a href="#matrix" class="nav-link"><i class="fas fa-table"></i> Behavior Matrix (PBIS)</a></li>
+                    <li><a href="#rules" class="nav-link"><i class="fas fa-list-check"></i> Classroom Rules</a></li>
+                    <li><a href="#teaching" class="nav-link"><i class="fas fa-chalkboard-user"></i> Teaching Methods</a></li>
+                </ul>
+                <li><a href="#part3-routines" class="nav-link"><i class="fas fa-clock"></i> Part 3: Routines & Procedures</a></li>
+                <ul class="sub-nav">
+                    <li><a href="#routine1" class="nav-link"><i class="fas fa-sun"></i> 1. Morning Arrival</a></li>
+                    <li><a href="#routine2" class="nav-link"><i class="fas fa-people-arrows"></i> 2. Lining Up / Hallway</a></li>
+                    <li><a href="#routine3" class="nav-link"><i class="fas fa-hand"></i> 3. Getting Help</a></li>
+                    <li><a href="#routine4" class="nav-link"><i class="fas fa-door-open"></i> 4. Dismissal</a></li>
+                    <li><a href="#routine5" class="nav-link"><i class="fas fa-fire-extinguisher"></i> 5. Fire Drill</a></li>
+                </ul>
+                <li><a href="#references" class="nav-link"><i class="fas fa-book-open"></i> References (APA)</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <i class="fas fa-leaf" style="color:#e68a2e;"></i> designed for first‑year success
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT (capitalized headings) -->
+    <main class="main-content">
+        <div class="main-title">Classroom Support Plan</div>
+        <div class="main-sub">Comprehensive guide for elementary teachers (grade 2)</div>
+
+        <!-- PART 1 INTRODUCTION -->
+        <section id="part1-intro">
+            <h2 class="section-title">Part 1 · Introduction</h2>
+            <div id="mission" class="mission-block">
+                <p>We are learners, leaders, and achievers. We believe in ourselves, our peers, and our community. We will change the world!</p>
+            </div>
+            <p><span class="badge">mission in action</span> This promise, adapted from school improvement frameworks, is posted daily and referenced during morning meeting. It reminds every student that our classroom is a community of growth (Wong & Wong, 2018).</p>
+        </section>
+
+        <section id="demographics">
+            <h3 class="subsection-title"><i class="fas fa-chart-pie"></i> Class Demographics · 22 Second‑Graders</h3>
+            <table>
+                <thead><tr><th>Demographic</th><th>%</th><th>Instructional Implications (Tomlinson, 2014; personal experience)</th></tr></thead>
+                <tbody>
+                    <tr><td>Hispanic/Latino</td><td>50%</td><td>Bilingual library (Spanish/English), greetings in Spanish, celebrate Día de los Niños, incorporate Latino authors.</td></tr>
+                    <tr><td>White</td><td>30%</td><td>Diverse narratives across curriculum; avoid single stories; include books with white protagonists from varied backgrounds.</td></tr>
+                    <tr><td>Two or More Races</td><td>10%</td><td>Identity‑affirming materials; family heritage sharing during “family expert” visits; ensure mixed‑race representation in visuals.</td></tr>
+                    <tr><td>Black/African American</td><td>10%</td><td>Literature by Black authors (e.g., Derrick Barnes, Jacqueline Woodson); highlight Black historical figures beyond standard curriculum.</td></tr>
+                    <tr><td>Special Education (IEP)</td><td>20%</td><td>UDL design: multiple means of representation, action/expression; flexible seating; co‑teaching with special educator; sensory breaks as needed.</td></tr>
+                    <tr><td>English Learners</td><td>17%</td><td>Visuals, sentence stems, peer buddies, explicit vocabulary pre‑teaching; use of gestures and realia; bilingual dictionaries.</td></tr>
+                    <tr><td>Gifted & Talented</td><td>6%</td><td>Enrichment clusters, passion projects, choice boards, compacting curriculum; mentorship opportunities.</td></tr>
+                </tbody>
+            </table>
+            <div class="example-box">
+                <i class="fas fa-lightbulb" style="color:#e68a2e;"></i> <strong>First‑year takeaway:</strong> Create a “class family” bulletin board with photos and family‑drawn flags to celebrate backgrounds from day one.
+            </div>
+        </section>
+
+        <!-- FAMILY ENGAGEMENT (6 strategies) -->
+        <section id="family">
+            <h3 class="subsection-title"><i class="fas fa-hand-holding-heart"></i> Family Engagement Strategies</h3>
+            <div class="card-grid">
+                <div class="card"><i class="fas fa-newspaper"></i> <strong>Weekly 'Learning Journey'</strong> – digital + paper newsletter: key concepts, vocabulary, and “ask me about…” prompts (Epstein, 2011). Includes a photo of the week.</div>
+                <div class="card"><i class="fas fa-mug-hot"></i> <strong>Coffee with the Class</strong> – quarterly informal morning meetings (virtual/in‑person) where families observe morning meeting and ask questions.</div>
+                <div class="card"><i class="fas fa-user-check"></i> <strong>Family Expert visits</strong> – invite family to share cultural traditions, careers, or hobbies; ties to curriculum (e.g., community helpers).</div>
+                <div class="card"><i class="fas fa-comment-dots"></i> <strong>Two‑way communication</strong> – Friday updates, digital portfolios (Seesaw), open observation slots; quick positive postcards sent home.</div>
+                <div class="card"><i class="fas fa-calendar-alt"></i> <strong>Family reading nights</strong> – twice per year, families come for storytelling and literacy games; children showcase work.</div>
+                <div class="card"><i class="fas fa-hands-helping"></i> <strong>Volunteer classroom helpers</strong> – sign‑up for reading partners, prep materials, or sharing a skill; training provided.</div>
+            </div>
+            <p><em>All communications are translated via school translation services; use a communication log to track outreach.</em></p>
+        </section>
+
+        <!-- PART 2 STRUCTURED ENVIRONMENT -->
+        <section id="part2-env">
+            <h2 class="section-title">Part 2 · Structured Teaching Environment</h2>
+            <div id="layout">
+                <h3 class="subsection-title"><i class="fas fa-vector-square"></i> Classroom Layout: The Third Teacher</h3>
+                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; background:#e7f0f9; padding:20px; border-radius:40px;">
+                    <div style="background:#fae6c3; border-radius:30px; padding:12px; text-align:center;">🧩 whole‑group carpet (morning meeting, mini‑lesson)</div>
+                    <div style="background:#c9e1f2; border-radius:30px; padding:12px; text-align:center;">🗂️ small‑group tables (x3) – collaboration</div>
+                    <div style="background:#c0ebd7; border-radius:30px; padding:12px; text-align:center;">🛋️ quiet nook / beanbags (self‑regulation)</div>
+                    <div style="background:#fed9b7; border-radius:30px; padding:12px; text-align:center;">📚 library & listening (diverse books)</div>
+                    <div style="background:#f1d0f1; border-radius:30px; padding:12px; text-align:center;">🧺 materials shelves (labeled with words + pictures)</div>
+                    <div style="background:#d5e6f5; border-radius:30px; padding:12px; text-align:center;">💺 flexible seating: wobble stools, cushions</div>
+                    <div style="background:#ffe3aa; border-radius:30px; padding:12px; text-align:center;">👩‍🏫 teacher table (small‑group intervention)</div>
+                    <div style="background:#c9e1f2; border-radius:30px; padding:12px; text-align:center;">🔲 standing/clipboard area for independent work</div>
+                </div>
+                <p><strong>Why it works:</strong> Zones support collaboration, calm, and independence. Students choose where to work during “choice time” (Strong‑Wiles & Hermon, 2020).</p>
+            </div>
+
+            <div id="matrix">
+                <h3 class="subsection-title"><i class="fas fa-table"></i> Spartan Star Behavior Matrix (PBIS)</h3>
+                <table class="matrix">
+                    <thead><tr><th>Setting</th><th>Be Safe</th><th>Be Kind</th><th>Be Responsible</th></tr></thead>
+                    <tbody>
+                        <tr><td>Classroom</td><td>Walk, feet on floor, use materials as taught</td><td>Include others, listen without interrupting, kind words</td><td>Clean up, complete class jobs, bring supplies</td></tr>
+                        <tr><td>Hallway</td><td>Face forward, hands to self, silent line</td><td>Hold doors, level 0 voices (silent)</td><td>Stay with class, keep bubble space</td></tr>
+                        <tr><td>Cafeteria</td><td>Walk with tray, sit facing table</td><td>Inside voices (level 2), include, say please/thank you</td><td>Clean table, raise hand for help, stay seated</td></tr>
+                        <tr><td>Playground</td><td>Use equipment safely, go down slide feet first</td><td>Invite others to play, use kind words, be a buddy</td><td>Line up at first bell, return equipment to bin</td></tr>
+                        <tr><td>Restroom</td><td>Wash hands with soap, one person per stall</td><td>Quiet voices, respect privacy</td><td>Flush, throw paper in trash, return promptly</td></tr>
+                    </tbody>
+                </table>
+                <p><em>Matrix is taught through role‑play, daily reviews for first month, then weekly (Horner et al., 2010).</em></p>
+            </div>
+
+            <div id="rules">
+                <h3 class="subsection-title"><i class="fas fa-list-check"></i> Classroom Rules (Co‑Created with Students)</h3>
+                <div class="rule-pills">
+                    <span class="rule-pill">✨ Be respectful</span>
+                    <span class="rule-pill">✨ Be responsible</span>
+                    <span class="rule-pill">✨ Be an upstander</span>
+                    <span class="rule-pill">✨ Always do your personal best</span>
+                </div>
+                <p>During first week, students share what each rule looks like/sounds like. We sign a class contract (Kriete, 2014).</p>
+            </div>
+
+            <div id="teaching">
+                <h3 class="subsection-title"><i class="fas fa-chalkboard-user"></i> Teaching Methods</h3>
+                <ul style="margin-left:1.5rem;">
+                    <li><strong>Explicit instruction</strong> (I do, we do, you do) – Lemov (2015). Used for new content and procedures.</li>
+                    <li><strong>Hands‑on / experiential</strong> – science experiments, math manipulatives, project‑based learning.</li>
+                    <li><strong>Student choice</strong> – choice boards, “must do / may do” during literacy centers.</li>
+                    <li><strong>Collaborative learning</strong> – partner talk, group investigations, think‑pair‑share.</li>
+                    <li><strong>Behavior‑specific praise</strong> – “I noticed how Maria pushed in her chair responsibly.” Reinforces matrix.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PART 3 ROUTINES & PROCEDURES -->
+        <section id="part3-routines">
+            <h2 class="section-title">Part 3 · Routines & Procedures</h2>
+            <div class="first-year-note">
+                <i class="fas fa-graduation-cap"></i>
+                <div><strong>First‑year cornerstone:</strong> All routines are taught using the 5‑step process: <strong>introduce, discuss, model, practice, review</strong> (Wong & Wong, 2018). Each lesson plan includes teacher language and practical tips. Click any routine to expand.</div>
+            </div>
+
+            <div class="accordion" id="routineAccordion">
+                <!-- routine 1 (open) -->
+                <div class="accordion-item open" id="routine1">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <i class="fas fa-sun"></i> 1. Morning Arrival & Getting Started
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="step-list">
+                            <li><span class="step-num">1</span> <strong>Introduce (day 1):</strong> “A calm morning helps us learn. Let’s learn our arrival steps.”</li>
+                            <li><span class="step-num">2</span> <strong>Discuss:</strong> “What do we need to do first? (hang coat, unpack folder, put lunch away).” List on chart.</li>
+                            <li><span class="step-num">3</span> <strong>Model:</strong> Teacher acts as student: enters, hangs backpack, places folder in bin, starts morning warm‑up. Also show incorrect (wandering, loud).</li>
+                            <li><span class="step-num">4</span> <strong>Practice:</strong> 3‑4 students at a time role‑play while class gives thumbs up/down. Repeat until all can do it.</li>
+                            <li><span class="step-num">5</span> <strong>Review:</strong> For first two weeks, review steps each morning. Use specific praise: “Zara, you remembered to put your folder in the bin immediately!”</li>
+                        </ul>
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i> <strong>Teacher language:</strong> “When you come in, first hang your bag, then put your folder in the bin, then start your morning puzzle. Watch me.” 
+                            <br><strong>Personal tip:</strong> Post a visual checklist near the door with pictures for each step.
+                        </div>
+                    </div>
+                </div>
+                <!-- routine 2 -->
+                <div class="accordion-item" id="routine2">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <i class="fas fa-people-arrows"></i> 2. Lining Up & Hallway Travel
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="step-list">
+                            <li><span class="step-num">1</span> <strong>Introduce:</strong> “We are leaders in the hallway – we keep everyone safe and quiet.”</li>
+                            <li><span class="step-num">2</span> <strong>Discuss:</strong> “What does ‘Be Safe’ look like? (hands to self, face forward). What about ‘Be Kind’? (silent so others can learn).”</li>
+                            <li><span class="step-num">3</span> <strong>Model:</strong> Signal: “Spartan Stars, line up.” Teacher raises hand, students freeze and raise hand, then call tables. Show silent line, bubble space.</li>
+                            <li><span class="step-num">4</span> <strong>Practice:</strong> Walk to specials (art, music). If talking or wiggling, calmly return and repeat. “We’ll try again until it’s safe.”</li>
+                            <li><span class="step-num">5</span> <strong>Review:</strong> Before every transition first month. Use a “hallway hero” award.</li>
+                        </ul>
+                        <p><strong>Personal note:</strong> Use a “magic bubble” wand to remind kids to keep personal space. They love it.</p>
+                    </div>
+                </div>
+                <!-- routine 3 -->
+                <div class="accordion-item" id="routine3">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <i class="fas fa-hand"></i> 3. Getting Help (Ask 3 Before Me)
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="step-list">
+                            <li><span class="step-num">1</span> <strong>Introduce:</strong> “We are problem‑solvers. Before you ask me, try three things.”</li>
+                            <li><span class="step-num">2</span> <strong>Discuss:</strong> Anchor chart: 1) Look at the board/anchor chart, 2) Ask a partner quietly, 3) Try another part, then raise hand.</li>
+                            <li><span class="step-num">3</span> <strong>Model:</strong> Student role‑play: gets stuck, looks at chart, then asks partner, then raises hand while continuing work.</li>
+                            <li><span class="step-num">4</span> <strong>Practice:</strong> During independent work, teacher intentionally delays response. Praise those who try strategies.</li>
+                            <li><span class="step-num">5</span> <strong>Review:</strong> Role‑play weekly for first month; refer to anchor chart daily.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- routine 4 -->
+                <div class="accordion-item" id="routine4">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <i class="fas fa-door-open"></i> 4. End‑of‑Day Dismissal
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="step-list">
+                            <li><span class="step-num">1</span> <strong>Introduce:</strong> “A calm dismissal means everyone gets home safely and we don’t forget things.”</li>
+                            <li><span class="step-num">2</span> <strong>Discuss:</strong> Steps: clean workspace, pack backpack, put folder in bag, quiet reading at desk, wait for group call.</li>
+                            <li><span class="step-num">3</span> <strong>Model:</strong> Teacher shows cleaning, packing, then reading silently.</li>
+                            <li><span class="step-num">4</span> <strong>Practice:</strong> 15‑minute countdown with timer. Praise tables that are ready. Dismiss by groups (bus, car, walk).</li>
+                            <li><span class="step-num">5</span> <strong>Review:</strong> After any messy day, debrief next morning. Re‑teach after breaks.</li>
+                        </ul>
+                        <p><strong>Example language:</strong> “Table 2 is completely ready – they may line up for their bus group.”</p>
+                    </div>
+                </div>
+                <!-- routine 5 -->
+                <div class="accordion-item" id="routine5">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <i class="fas fa-fire-extinguisher"></i> 5. Fire Drill (Emergency)
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="step-list">
+                            <li><span class="step-num">1</span> <strong>Introduce:</strong> “Fire drills keep us safe. We must be silent and fast.”</li>
+                            <li><span class="step-num">2</span> <strong>Discuss:</strong> Signal: loud alarm. Stop, line up silently at door, teacher leads out to blacktop. Sit and wait for attendance.</li>
+                            <li><span class="step-num">3</span> <strong>Model:</strong> Walk the route to blacktop, show where to sit. Practice “freeze and line” inside.</li>
+                            <li><span class="step-num">4</span> <strong>Practice:</strong> First drill is announced; afterward, debrief what went well.</li>
+                            <li><span class="step-num">5</span> <strong>Review:</strong> Before each monthly drill, remind expectations. Use a calm voice – avoid scaring.</li>
+                        </ul>
+                        <p><strong>From experience:</strong> After a drill, always say, “You kept us safe by being silent. I’m proud.”</p>
+                    </div>
+                </div>
+            </div>
+            <p><i class="fas fa-lightbulb" style="color:#e68a2e;"></i> <strong>Pro tip:</strong> After long breaks, re‑teach one routine per day using the same 5‑step process.</p>
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references">
+            <h2 class="section-title"><i class="fas fa-book-open" style="margin-right:10px;"></i> References (APA 7th)</h2>
+            <div class="references">
+                <p>Dweck, C. S. (2016). <em>Mindset: The new psychology of success</em>. Random House. <a href="https://www.penguinrandomhouse.com/books/443309/mindset-by-carol-s-dweck/" target="_blank">https://icrrd.com/public/media/01-11-2020-205951Mindset%20by%20Carol%20S.%20Dweck.pdf</a></p>
+                <p>Epstein, J. L. (2011). <em>School, family, and community partnerships: Preparing educators and improving schools</em> (2nd ed.). Westview Press. <a href="https://www.routledge.com/School-Family-and-Community-Partnerships/Epstein/p/book/9780813344478" target="_blank">https://www.routledge.com/School-Family-and-Community-Partnerships/Epstein/p/book/9780813344478</a></p>
+                <p>Horner, R. H., Sugai, G., & Anderson, C. M. (2010). Examining the evidence base for school-wide positive behavior support. <em>Exceptional Children, 76</em>(3), 301–321. <a href="https://journals.sagepub.com/doi/10.1177/001440291007600305" target="_blank">https://journals.sagepub.com/doi/10.1177/001440291007600305</a></p>
+                <p>Kriete, R. (2014). <em>The morning meeting book</em> (3rd ed.). Center for Responsive Schools. <a href="https://www.responsiveclassroom.org/book/the-morning-meeting-book-3rd-edition/" target="_blank">https://www.responsiveclassroom.org/book/the-morning-meeting-book-3rd-edition/</a></p>
+                <p>Lemov, D. (2015). <em>Teach like a champion 2.0: 62 techniques that put students on the path to college</em>. Jossey‑Bass. <a href="https://www.wiley.com/en-us/Teach+Like+a+Champion+2.0%3A+62+Techniques+That+Put+Students+on+the+Path+to+College-p-9781118901854" target="_blank">https://www.wiley.com/en-us/Teach+Like+a+Champion+2.0</a></p>
+                <p>Strong‑Wiles, J., & Hermon, C. (2020). The third teacher: How classroom design shapes learning. <em>Educational Leadership, 77</em>(8), 42–47. <a href="https://www.ascd.org/el/articles/the-third-teacher-how-classroom-design-shapes-learning" target="_blank">https://www.ascd.org/el/articles/the-third-teacher-how-classroom-design-shapes-learning</a></p>
+                <p>Tomlinson, C. A. (2014). <em>The differentiated classroom: Responding to the needs of all learners</em> (2nd ed.). ASCD. <a href="https://www.ascd.org/books/the-differentiated-classroom-2nd-edition" target="_blank">https://rutamaestra.santillana.com.co/wp-content/uploads/2020/01/The-Differentiated-Classroom-Responding-to-the-Needs.pdf</a></p>
+                <p>Wong, H. K., & Wong, R. T. (2018). <em>The first days of school: How to be an effective teacher</em> (5th ed.). Harry K. Wong Publications. <a href="https://www.effectiveteaching.com/the-first-days-of-school-5th-edition" target="_blank">https://www.effectiveteaching.com/the-first-days-of-school-5th-edition</a></p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            Classroom Support Plan ©2026
+        </div>
+    </main>
+</div>
+
+<!-- JAVASCRIPT for accordion and active nav -->
+<script>
+    window.toggleAccordion = function(header) {
+        const item = header.closest('.accordion-item');
+        if (!item) return;
+        item.classList.toggle('open');
+        const content = item.querySelector('.accordion-content');
+        if (item.classList.contains('open')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = null;
+        }
+    };
+
+    function setAllOpenAccordions() {
+        document.querySelectorAll('.accordion-item.open').forEach(item => {
+            const content = item.querySelector('.accordion-content');
+            if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        });
+    }
+    window.addEventListener('load', setAllOpenAccordions);
+    window.addEventListener('resize', setAllOpenAccordions);
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('section[id], div[id]');
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionBottom = sectionTop + section.clientHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
