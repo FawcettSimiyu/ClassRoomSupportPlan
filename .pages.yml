@@ -1,0 +1,123 @@
+site: .
+content:
+  - name: homepage
+    label: Homepage
+    file: index.html
+    fields:
+      - name: main_title
+        label: Main Title
+        type: text
+      - name: main_sub
+        label: Main Subtitle
+        type: text
+      - name: part1_title
+        label: Part 1 Title
+        type: text
+      - name: mission_block
+        label: Mission Statement Block
+        type: html
+      - name: mission_note
+        label: Mission Note
+        type: html
+      - name: demographics_title
+        label: Demographics Title
+        type: text
+      - name: demographics_table
+        label: Demographics Table
+        type: html
+      - name: demographics_note
+        label: Demographics Note
+        type: html
+      - name: family_title
+        label: Family Engagement Title
+        type: text
+      - name: family_cards
+        label: Family Engagement Cards
+        type: html
+      - name: family_note
+        label: Family Engagement Note
+        type: html
+      - name: part2_title
+        label: Part 2 Title
+        type: text
+      - name: layout_title
+        label: Layout Title
+        type: text
+      - name: layout_grid
+        label: Classroom Layout Grid
+        type: html
+      - name: layout_note
+        label: Layout Note
+        type: html
+      - name: matrix_title
+        label: Behavior Matrix Title
+        type: text
+      - name: matrix_table
+        label: Behavior Matrix Table
+        type: html
+      - name: matrix_note
+        label: Behavior Matrix Note
+        type: html
+      - name: rules_title
+        label: Rules Title
+        type: text
+      - name: rules_pills
+        label: Rule Pills
+        type: html
+      - name: rules_note
+        label: Rules Note
+        type: html
+      - name: teaching_title
+        label: Teaching Methods Title
+        type: text
+      - name: teaching_list
+        label: Teaching Methods List
+        type: html
+      - name: part3_title
+        label: Part 3 Title
+        type: text
+      - name: routines_intro
+        label: Routines Introduction
+        type: html
+      - name: routine1_header
+        label: Routine 1 Header
+        type: text
+      - name: routine1_content
+        label: Routine 1 Content
+        type: html
+      - name: routine2_header
+        label: Routine 2 Header
+        type: text
+      - name: routine2_content
+        label: Routine 2 Content
+        type: html
+      - name: routine3_header
+        label: Routine 3 Header
+        type: text
+      - name: routine3_content
+        label: Routine 3 Content
+        type: html
+      - name: routine4_header
+        label: Routine 4 Header
+        type: text
+      - name: routine4_content
+        label: Routine 4 Content
+        type: html
+      - name: routine5_header
+        label: Routine 5 Header
+        type: text
+      - name: routine5_content
+        label: Routine 5 Content
+        type: html
+      - name: routines_protip
+        label: Routines Pro Tip
+        type: html
+      - name: references_title
+        label: References Title
+        type: text
+      - name: references_list
+        label: References List
+        type: html
+      - name: footer_note
+        label: Footer Note
+        type: text

@@ -388,23 +388,24 @@
         </div>
     </aside>
 
-    <!-- MAIN CONTENT (capitalized headings) -->
-    <main class="main-content">
-        <div class="main-title">Classroom Support Plan</div>
-        <div class="main-sub">Comprehensive guide for elementary teachers (grade 2)</div>
+    <!-- MAIN CONTENT – now wrapped in CMS scope -->
+    <main class="main-content" data-cms-scope="content">
+        <!-- main title & subtitle -->
+        <div class="main-title" data-cms-field="main_title">Classroom Support Plan</div>
+        <div class="main-sub" data-cms-field="main_sub">Comprehensive guide for elementary teachers (grade 2)</div>
 
         <!-- PART 1 INTRODUCTION -->
         <section id="part1-intro">
-            <h2 class="section-title">Part 1 · Introduction</h2>
-            <div id="mission" class="mission-block">
+            <h2 class="section-title" data-cms-field="part1_title">Part 1 · Introduction</h2>
+            <div id="mission" class="mission-block" data-cms-field="mission_block">
                 <p>We are learners, leaders, and achievers. We believe in ourselves, our peers, and our community. We will change the world!</p>
             </div>
-            <p><span class="badge">mission in action</span> This promise, adapted from school improvement frameworks, is posted daily and referenced during morning meeting. It reminds every student that our classroom is a community of growth (Wong & Wong, 2018).</p>
+            <p data-cms-field="mission_note"><span class="badge">mission in action</span> This promise, adapted from school improvement frameworks, is posted daily and referenced during morning meeting. It reminds every student that our classroom is a community of growth (Wong & Wong, 2018).</p>
         </section>
 
         <section id="demographics">
-            <h3 class="subsection-title"><i class="fas fa-chart-pie"></i> Class Demographics · 22 Second‑Graders</h3>
-            <table>
+            <h3 class="subsection-title" data-cms-field="demographics_title"><i class="fas fa-chart-pie"></i> Class Demographics · 22 Second‑Graders</h3>
+            <table data-cms-field="demographics_table">
                 <thead><tr><th>Demographic</th><th>%</th><th>Instructional Implications (Tomlinson, 2014; personal experience)</th></tr></thead>
                 <tbody>
                     <tr><td>Hispanic/Latino</td><td>50%</td><td>Bilingual library (Spanish/English), greetings in Spanish, celebrate Día de los Niños, incorporate Latino authors.</td></tr>
@@ -416,15 +417,15 @@
                     <tr><td>Gifted & Talented</td><td>6%</td><td>Enrichment clusters, passion projects, choice boards, compacting curriculum; mentorship opportunities.</td></tr>
                 </tbody>
             </table>
-            <div class="example-box">
+            <div class="example-box" data-cms-field="demographics_note">
                 <i class="fas fa-lightbulb" style="color:#e68a2e;"></i> <strong>First‑year takeaway:</strong> Create a “class family” bulletin board with photos and family‑drawn flags to celebrate backgrounds from day one.
             </div>
         </section>
 
         <!-- FAMILY ENGAGEMENT (6 strategies) -->
         <section id="family">
-            <h3 class="subsection-title"><i class="fas fa-hand-holding-heart"></i> Family Engagement Strategies</h3>
-            <div class="card-grid">
+            <h3 class="subsection-title" data-cms-field="family_title"><i class="fas fa-hand-holding-heart"></i> Family Engagement Strategies</h3>
+            <div class="card-grid" data-cms-field="family_cards">
                 <div class="card"><i class="fas fa-newspaper"></i> <strong>Weekly 'Learning Journey'</strong> – digital + paper newsletter: key concepts, vocabulary, and “ask me about…” prompts (Epstein, 2011). Includes a photo of the week.</div>
                 <div class="card"><i class="fas fa-mug-hot"></i> <strong>Coffee with the Class</strong> – quarterly informal morning meetings (virtual/in‑person) where families observe morning meeting and ask questions.</div>
                 <div class="card"><i class="fas fa-user-check"></i> <strong>Family Expert visits</strong> – invite family to share cultural traditions, careers, or hobbies; ties to curriculum (e.g., community helpers).</div>
@@ -432,15 +433,15 @@
                 <div class="card"><i class="fas fa-calendar-alt"></i> <strong>Family reading nights</strong> – twice per year, families come for storytelling and literacy games; children showcase work.</div>
                 <div class="card"><i class="fas fa-hands-helping"></i> <strong>Volunteer classroom helpers</strong> – sign‑up for reading partners, prep materials, or sharing a skill; training provided.</div>
             </div>
-            <p><em>All communications are translated via school translation services; use a communication log to track outreach.</em></p>
+            <p data-cms-field="family_note"><em>All communications are translated via school translation services; use a communication log to track outreach.</em></p>
         </section>
 
         <!-- PART 2 STRUCTURED ENVIRONMENT -->
         <section id="part2-env">
-            <h2 class="section-title">Part 2 · Structured Teaching Environment</h2>
+            <h2 class="section-title" data-cms-field="part2_title">Part 2 · Structured Teaching Environment</h2>
             <div id="layout">
-                <h3 class="subsection-title"><i class="fas fa-vector-square"></i> Classroom Layout: The Third Teacher</h3>
-                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; background:#e7f0f9; padding:20px; border-radius:40px;">
+                <h3 class="subsection-title" data-cms-field="layout_title"><i class="fas fa-vector-square"></i> Classroom Layout: The Third Teacher</h3>
+                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; background:#e7f0f9; padding:20px; border-radius:40px;" data-cms-field="layout_grid">
                     <div style="background:#fae6c3; border-radius:30px; padding:12px; text-align:center;">🧩 whole‑group carpet (morning meeting, mini‑lesson)</div>
                     <div style="background:#c9e1f2; border-radius:30px; padding:12px; text-align:center;">🗂️ small‑group tables (x3) – collaboration</div>
                     <div style="background:#c0ebd7; border-radius:30px; padding:12px; text-align:center;">🛋️ quiet nook / beanbags (self‑regulation)</div>
@@ -450,12 +451,12 @@
                     <div style="background:#ffe3aa; border-radius:30px; padding:12px; text-align:center;">👩‍🏫 teacher table (small‑group intervention)</div>
                     <div style="background:#c9e1f2; border-radius:30px; padding:12px; text-align:center;">🔲 standing/clipboard area for independent work</div>
                 </div>
-                <p><strong>Why it works:</strong> Zones support collaboration, calm, and independence. Students choose where to work during “choice time” (Strong‑Wiles & Hermon, 2020).</p>
+                <p data-cms-field="layout_note"><strong>Why it works:</strong> Zones support collaboration, calm, and independence. Students choose where to work during “choice time” (Strong‑Wiles & Hermon, 2020).</p>
             </div>
 
             <div id="matrix">
-                <h3 class="subsection-title"><i class="fas fa-table"></i> Spartan Star Behavior Matrix (PBIS)</h3>
-                <table class="matrix">
+                <h3 class="subsection-title" data-cms-field="matrix_title"><i class="fas fa-table"></i> Spartan Star Behavior Matrix (PBIS)</h3>
+                <table class="matrix" data-cms-field="matrix_table">
                     <thead><tr><th>Setting</th><th>Be Safe</th><th>Be Kind</th><th>Be Responsible</th></tr></thead>
                     <tbody>
                         <tr><td>Classroom</td><td>Walk, feet on floor, use materials as taught</td><td>Include others, listen without interrupting, kind words</td><td>Clean up, complete class jobs, bring supplies</td></tr>
@@ -465,23 +466,23 @@
                         <tr><td>Restroom</td><td>Wash hands with soap, one person per stall</td><td>Quiet voices, respect privacy</td><td>Flush, throw paper in trash, return promptly</td></tr>
                     </tbody>
                 </table>
-                <p><em>Matrix is taught through role‑play, daily reviews for first month, then weekly (Horner et al., 2010).</em></p>
+                <p data-cms-field="matrix_note"><em>Matrix is taught through role‑play, daily reviews for first month, then weekly (Horner et al., 2010).</em></p>
             </div>
 
             <div id="rules">
-                <h3 class="subsection-title"><i class="fas fa-list-check"></i> Classroom Rules (Co‑Created with Students)</h3>
-                <div class="rule-pills">
+                <h3 class="subsection-title" data-cms-field="rules_title"><i class="fas fa-list-check"></i> Classroom Rules (Co‑Created with Students)</h3>
+                <div class="rule-pills" data-cms-field="rules_pills">
                     <span class="rule-pill">✨ Be respectful</span>
                     <span class="rule-pill">✨ Be responsible</span>
                     <span class="rule-pill">✨ Be an upstander</span>
                     <span class="rule-pill">✨ Always do your personal best</span>
                 </div>
-                <p>During first week, students share what each rule looks like/sounds like. We sign a class contract (Kriete, 2014).</p>
+                <p data-cms-field="rules_note">During first week, students share what each rule looks like/sounds like. We sign a class contract (Kriete, 2014).</p>
             </div>
 
             <div id="teaching">
-                <h3 class="subsection-title"><i class="fas fa-chalkboard-user"></i> Teaching Methods</h3>
-                <ul style="margin-left:1.5rem;">
+                <h3 class="subsection-title" data-cms-field="teaching_title"><i class="fas fa-chalkboard-user"></i> Teaching Methods</h3>
+                <ul style="margin-left:1.5rem;" data-cms-field="teaching_list">
                     <li><strong>Explicit instruction</strong> (I do, we do, you do) – Lemov (2015). Used for new content and procedures.</li>
                     <li><strong>Hands‑on / experiential</strong> – science experiments, math manipulatives, project‑based learning.</li>
                     <li><strong>Student choice</strong> – choice boards, “must do / may do” during literacy centers.</li>
@@ -493,8 +494,8 @@
 
         <!-- PART 3 ROUTINES & PROCEDURES -->
         <section id="part3-routines">
-            <h2 class="section-title">Part 3 · Routines & Procedures</h2>
-            <div class="first-year-note">
+            <h2 class="section-title" data-cms-field="part3_title">Part 3 · Routines & Procedures</h2>
+            <div class="first-year-note" data-cms-field="routines_intro">
                 <i class="fas fa-graduation-cap"></i>
                 <div><strong>First‑year cornerstone:</strong> All routines are taught using the 5‑step process: <strong>introduce, discuss, model, practice, review</strong> (Wong & Wong, 2018). Each lesson plan includes teacher language and practical tips. Click any routine to expand.</div>
             </div>
@@ -503,10 +504,10 @@
                 <!-- routine 1 (open) -->
                 <div class="accordion-item open" id="routine1">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <i class="fas fa-sun"></i> 1. Morning Arrival & Getting Started
+                        <i class="fas fa-sun"></i> <span data-cms-field="routine1_header">1. Morning Arrival & Getting Started</span>
                         <i class="fas fa-chevron-down chevron"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-cms-field="routine1_content">
                         <ul class="step-list">
                             <li><span class="step-num">1</span> <strong>Introduce (day 1):</strong> “A calm morning helps us learn. Let’s learn our arrival steps.”</li>
                             <li><span class="step-num">2</span> <strong>Discuss:</strong> “What do we need to do first? (hang coat, unpack folder, put lunch away).” List on chart.</li>
@@ -523,10 +524,10 @@
                 <!-- routine 2 -->
                 <div class="accordion-item" id="routine2">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <i class="fas fa-people-arrows"></i> 2. Lining Up & Hallway Travel
+                        <i class="fas fa-people-arrows"></i> <span data-cms-field="routine2_header">2. Lining Up & Hallway Travel</span>
                         <i class="fas fa-chevron-down chevron"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-cms-field="routine2_content">
                         <ul class="step-list">
                             <li><span class="step-num">1</span> <strong>Introduce:</strong> “We are leaders in the hallway – we keep everyone safe and quiet.”</li>
                             <li><span class="step-num">2</span> <strong>Discuss:</strong> “What does ‘Be Safe’ look like? (hands to self, face forward). What about ‘Be Kind’? (silent so others can learn).”</li>
@@ -540,10 +541,10 @@
                 <!-- routine 3 -->
                 <div class="accordion-item" id="routine3">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <i class="fas fa-hand"></i> 3. Getting Help (Ask 3 Before Me)
+                        <i class="fas fa-hand"></i> <span data-cms-field="routine3_header">3. Getting Help (Ask 3 Before Me)</span>
                         <i class="fas fa-chevron-down chevron"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-cms-field="routine3_content">
                         <ul class="step-list">
                             <li><span class="step-num">1</span> <strong>Introduce:</strong> “We are problem‑solvers. Before you ask me, try three things.”</li>
                             <li><span class="step-num">2</span> <strong>Discuss:</strong> Anchor chart: 1) Look at the board/anchor chart, 2) Ask a partner quietly, 3) Try another part, then raise hand.</li>
@@ -556,10 +557,10 @@
                 <!-- routine 4 -->
                 <div class="accordion-item" id="routine4">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <i class="fas fa-door-open"></i> 4. End‑of‑Day Dismissal
+                        <i class="fas fa-door-open"></i> <span data-cms-field="routine4_header">4. End‑of‑Day Dismissal</span>
                         <i class="fas fa-chevron-down chevron"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-cms-field="routine4_content">
                         <ul class="step-list">
                             <li><span class="step-num">1</span> <strong>Introduce:</strong> “A calm dismissal means everyone gets home safely and we don’t forget things.”</li>
                             <li><span class="step-num">2</span> <strong>Discuss:</strong> Steps: clean workspace, pack backpack, put folder in bag, quiet reading at desk, wait for group call.</li>
@@ -573,10 +574,10 @@
                 <!-- routine 5 -->
                 <div class="accordion-item" id="routine5">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <i class="fas fa-fire-extinguisher"></i> 5. Fire Drill (Emergency)
+                        <i class="fas fa-fire-extinguisher"></i> <span data-cms-field="routine5_header">5. Fire Drill (Emergency)</span>
                         <i class="fas fa-chevron-down chevron"></i>
                     </div>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-cms-field="routine5_content">
                         <ul class="step-list">
                             <li><span class="step-num">1</span> <strong>Introduce:</strong> “Fire drills keep us safe. We must be silent and fast.”</li>
                             <li><span class="step-num">2</span> <strong>Discuss:</strong> Signal: loud alarm. Stop, line up silently at door, teacher leads out to blacktop. Sit and wait for attendance.</li>
@@ -588,13 +589,13 @@
                     </div>
                 </div>
             </div>
-            <p><i class="fas fa-lightbulb" style="color:#e68a2e;"></i> <strong>Pro tip:</strong> After long breaks, re‑teach one routine per day using the same 5‑step process.</p>
+            <p data-cms-field="routines_protip"><i class="fas fa-lightbulb" style="color:#e68a2e;"></i> <strong>Pro tip:</strong> After long breaks, re‑teach one routine per day using the same 5‑step process.</p>
         </section>
 
         <!-- REFERENCES -->
         <section id="references">
-            <h2 class="section-title"><i class="fas fa-book-open" style="margin-right:10px;"></i> References (APA 7th)</h2>
-            <div class="references">
+            <h2 class="section-title" data-cms-field="references_title"><i class="fas fa-book-open" style="margin-right:10px;"></i> References (APA 7th)</h2>
+            <div class="references" data-cms-field="references_list">
                 <p>Dweck, C. S. (2016). <em>Mindset: The new psychology of success</em>. Random House. <a href="https://www.penguinrandomhouse.com/books/443309/mindset-by-carol-s-dweck/" target="_blank">https://icrrd.com/public/media/01-11-2020-205951Mindset%20by%20Carol%20S.%20Dweck.pdf</a></p>
                 <p>Epstein, J. L. (2011). <em>School, family, and community partnerships: Preparing educators and improving schools</em> (2nd ed.). Westview Press. <a href="https://www.routledge.com/School-Family-and-Community-Partnerships/Epstein/p/book/9780813344478" target="_blank">https://www.routledge.com/School-Family-and-Community-Partnerships/Epstein/p/book/9780813344478</a></p>
                 <p>Horner, R. H., Sugai, G., & Anderson, C. M. (2010). Examining the evidence base for school-wide positive behavior support. <em>Exceptional Children, 76</em>(3), 301–321. <a href="https://journals.sagepub.com/doi/10.1177/001440291007600305" target="_blank">https://journals.sagepub.com/doi/10.1177/001440291007600305</a></p>
@@ -607,7 +608,7 @@
         </section>
 
         <!-- FOOTER -->
-        <div class="footer-note">
+        <div class="footer-note" data-cms-field="footer_note">
             Classroom Support Plan ©2026
         </div>
     </main>
@@ -655,5 +656,8 @@
         });
     });
 </script>
+
+<!-- Pages CMS script -->
+<script src="https://unpkg.com/pages-cms@latest/dist/pages-cms.js"></script>
 </body>
 </html>
